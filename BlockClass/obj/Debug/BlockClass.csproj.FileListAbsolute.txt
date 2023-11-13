@@ -1,0 +1,6 @@
+c:\users\pc\documents\visual studio 2013\Projects\BlockLink\BlockClass\bin\Debug\BlockClass.dll
+c:\users\pc\documents\visual studio 2013\Projects\BlockLink\BlockClass\bin\Debug\BlockClass.pdb
+c:\users\pc\documents\visual studio 2013\Projects\BlockLink\BlockClass\obj\Debug\BlockClass.dll
+c:\users\pc\documents\visual studio 2013\Projects\BlockLink\BlockClass\obj\Debug\BlockClass.pdb
+c:\users\pc\documents\visual studio 2013\Projects\BlockLink\BlockClass\obj\Debug\BlockClass.csprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\Visual Studio 2013\Projects\BlockLink\BlockClass\bin\Debug\Newtonsoft.Json.dll
