@@ -40,7 +40,7 @@ namespace BlockLink
             string patch = BlockPath + "\\" + user + "\\";
             bl.getBlockFullLink(BlockPath);
             //bl.writeBlock(bl.BlockLink[0], patch);
-            bl.writeBlock(bl.cBlock(bl.BlockLink[bl.BlockLink.Count - 1], data), patch);
+            bl.WriteBlock(bl.cBlock(bl.BlockLink[bl.BlockLink.Count - 1], data), patch);
 
             Context.Response.Write(JsonConvert.SerializeObject(bl.BlockLink));
             Context.Response.End();

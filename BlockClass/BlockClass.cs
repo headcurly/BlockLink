@@ -18,10 +18,12 @@ namespace BlockClass
             public string Hash;
             public string PrevHash;
         }
+
         //主链
         public List<Block> BlockLink = new List<Block>();
 
         string BlockPatch = "";
+
         /// <summary>
         /// 创世块
         /// </summary>
@@ -39,7 +41,7 @@ namespace BlockClass
                 godBlock.Hash = cHash(godBlock);
                 //BlockLink.Add(godBlock);
 
-                writeBlock(godBlock, Patch + "\\god\\");
+                WriteBlock(godBlock, Patch + "\\god\\");
             }
         }
         /// <summary>
@@ -60,7 +62,7 @@ namespace BlockClass
             }
             catch (Exception ex)
             {
-                return "";
+                Console.Out.WriteLine(ex);
             }
         }
 
@@ -108,7 +110,11 @@ namespace BlockClass
                 BlockLink = nowLink;
         }
 
-
+        /// <summary>
+        /// 添加块
+        /// </summary>
+        /// <param name="nowLink"></param>
+        /// <param name="fileFloder"></param>
         public void writeBlock(Block nowLink, string fileFloder)
         {
             string patch = fileFloder + nowLink.Hash;
