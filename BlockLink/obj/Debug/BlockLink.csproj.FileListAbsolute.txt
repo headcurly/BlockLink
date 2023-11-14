@@ -1,0 +1,10 @@
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\bin\BlockLink.dll.config
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\bin\BlockLink.dll
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\bin\BlockLink.pdb
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\bin\BlockClass.dll
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\bin\BlockClass.pdb
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\obj\Debug\BlockLink.csprojAssemblyReference.cache
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\obj\Debug\BlockLink.csproj.CoreCompileInputs.cache
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\obj\Debug\BlockLink.csproj.CopyComplete
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\obj\Debug\BlockLink.dll
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockLink\obj\Debug\BlockLink.pdb

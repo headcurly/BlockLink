@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace BlockClass
@@ -33,7 +29,7 @@ namespace BlockClass
         {
             BlockPatch = Patch;
             getBlockFullLink(Patch);
-            if(BlockLink.Count <=0)
+            if (BlockLink.Count <= 0)
             {
                 Block godBlock = new Block();
                 godBlock.Index = 0;
@@ -51,26 +47,19 @@ namespace BlockClass
         /// </summary>
         /// <param name="thisBlock"></param>
         /// <returns></returns>
-        public string cHash(Block thisBlock){
-            thisBlock.Hash = "";
-            //IntPtr buffer = Marshal.AllocHGlobal(size);  
+        public string cHash(Block thisBlock)
+        {
+            thisBlock.Hash = ""; 
             try
             {
-                //Marshal.StructureToPtr(thisBlock, buffer, false);   
-                //byte[] bytes = new byte[size];
-                //Marshal.Copy(buffer, bytes, 0, size);
-
-                //string blockst = "";
                 //生成hash
                 SHA256 sha256 = new SHA256Managed();
                 byte[] hashbit = sha256.ComputeHash(System.Text.Encoding.Default.GetBytes(JsonConvert.SerializeObject(thisBlock)));
-                //Marshal.FreeHGlobal(buffer);
                 sha256.Clear();
-                return BitConverter.ToString(hashbit).Replace("-","");
+                return BitConverter.ToString(hashbit).Replace("-", "");
             }
             catch (Exception ex)
             {
-                //Marshal.FreeHGlobal(buffer);
                 return "";
             }
         }
@@ -81,7 +70,7 @@ namespace BlockClass
         /// <param name="oldBlock"></param>
         /// <param name="data"></param>
         /// <returns></returns>
-        public Block cBlock(Block oldBlock,string data)
+        public Block cBlock(Block oldBlock, string data)
         {
             Block bl = new Block();
             bl.Index = oldBlock.Index + 1;
@@ -98,7 +87,7 @@ namespace BlockClass
         /// <param name="oldBlock"></param>
         /// <param name="nowBlock"></param>
         /// <returns></returns>
-        public bool checkBlock(Block oldBlock,Block nowBlock)
+        public bool checkBlock(Block oldBlock, Block nowBlock)
         {
             if (oldBlock.Index + 1 != nowBlock.Index)
                 return false;
@@ -120,24 +109,17 @@ namespace BlockClass
         }
 
 
-        public void writeBlock(Block nowLink,string fileFloder)
+        public void writeBlock(Block nowLink, string fileFloder)
         {
             string patch = fileFloder + nowLink.Hash;
-            //if (!Directory.Exists(fileFloder))
-            //    Directory.CreateDirectory(fileFloder);
-            //FileStream file = new FileStream(patch, FileMode.Create);
-            //byte[] data = System.Text.Encoding.Default.GetBytes(JsonConvert.SerializeObject(nowLink));
-            //file.Write(data, 0, data.Length);
-            //file.Flush();
-            //file.Close();
 
             if (!Directory.Exists(fileFloder))
                 Directory.CreateDirectory(fileFloder);
             string blockStr = JsonConvert.SerializeObject(nowLink);
-            File.WriteAllText(patch,blockStr);
+            File.WriteAllText(patch, blockStr);
 
             List<string> node = new List<string>();
-            foreach(DirectoryInfo d in (new DirectoryInfo(BlockPatch)).GetDirectories())
+            foreach (DirectoryInfo d in (new DirectoryInfo(BlockPatch)).GetDirectories())
             {
                 node.Add(d.FullName);
             }
@@ -160,24 +142,27 @@ namespace BlockClass
             BlockLink.Add(nowLink);
         }
 
-
+        /// <summary>
+        /// 全链遍历
+        /// </summary>
+        /// <param name="blockFloder"></param>
         public void getBlockFullLink(string blockFloder)
         {
             DirectoryInfo root = new DirectoryInfo(blockFloder);
             List<string> blockFileList = new List<string>();
             foreach (DirectoryInfo d in root.GetDirectories())
             {
-                foreach(string f in Directory.GetFiles(d.FullName))
+                foreach (string f in Directory.GetFiles(d.FullName))
                 {
                     blockFileList.Add(f);
                 }
             }
 
-            if(blockFileList.Count > 0)
+            if (blockFileList.Count > 0)
             {
                 int i = 0;
                 string nextPreHash = "";
-                while (1==1)
+                while (1 == 1)
                 {
                     int Last = i;
                     foreach (string name in blockFileList)
@@ -196,9 +181,9 @@ namespace BlockClass
                                     i++;
                                     break;
                                 }
-                                if(bl.PrevHash == nextPreHash)
+                                if (bl.PrevHash == nextPreHash)
                                 {
-                                    if(checkBlock(BlockLink[BlockLink.Count - 1], bl))
+                                    if (checkBlock(BlockLink[BlockLink.Count - 1], bl))
                                     {
                                         BlockLink.Add(bl);
                                         nextPreHash = bl.Hash;

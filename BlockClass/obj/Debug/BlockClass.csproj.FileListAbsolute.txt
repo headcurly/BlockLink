@@ -4,3 +4,10 @@ c:\users\pc\documents\visual studio 2013\Projects\BlockLink\BlockClass\obj\Debug
 c:\users\pc\documents\visual studio 2013\Projects\BlockLink\BlockClass\obj\Debug\BlockClass.pdb
 c:\users\pc\documents\visual studio 2013\Projects\BlockLink\BlockClass\obj\Debug\BlockClass.csprojResolveAssemblyReference.cache
 C:\Users\PC\Documents\Visual Studio 2013\Projects\BlockLink\BlockClass\bin\Debug\Newtonsoft.Json.dll
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockClass\bin\Debug\BlockClass.dll
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockClass\bin\Debug\BlockClass.pdb
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockClass\obj\Debug\BlockClass.csprojAssemblyReference.cache
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockClass\obj\Debug\BlockClass.csproj.CoreCompileInputs.cache
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockClass\obj\Debug\BlockClass.csproj.CopyComplete
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockClass\obj\Debug\BlockClass.dll
+E:\_Work\_MyProgram\MyProjects\BlockLink\BlockClass\obj\Debug\BlockClass.pdb
