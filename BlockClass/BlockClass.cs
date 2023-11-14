@@ -41,7 +41,7 @@ namespace BlockClass
                 godBlock.Hash = cHash(godBlock);
                 //BlockLink.Add(godBlock);
 
-                WriteBlock(godBlock, Patch + "\\god\\");
+                writeBlock(godBlock, Patch + "\\god\\");
             }
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace BlockClass
         /// <returns></returns>
         public string cHash(Block thisBlock)
         {
-            thisBlock.Hash = ""; 
+            thisBlock.Hash = "";
             try
             {
                 //生成hash
@@ -63,6 +63,7 @@ namespace BlockClass
             catch (Exception ex)
             {
                 Console.Out.WriteLine(ex);
+                return "";
             }
         }
 

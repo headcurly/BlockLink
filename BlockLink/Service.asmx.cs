@@ -24,6 +24,9 @@ namespace BlockLink
             return "Hello World," + say;
         }
 
+        /// <summary>
+        /// 获取所有用户块，生成全区块
+        /// </summary>
         [WebMethod]
         public void GetBlockLink()
         {
@@ -33,6 +36,11 @@ namespace BlockLink
             Context.Response.End();
         }
 
+        /// <summary>
+        /// 创建区块
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="user"></param>
         [WebMethod]
         public void CreatBlock(string data,string user)
         {
@@ -40,7 +48,7 @@ namespace BlockLink
             string patch = BlockPath + "\\" + user + "\\";
             bl.getBlockFullLink(BlockPath);
             //bl.writeBlock(bl.BlockLink[0], patch);
-            bl.WriteBlock(bl.cBlock(bl.BlockLink[bl.BlockLink.Count - 1], data), patch);
+            bl.writeBlock(bl.cBlock(bl.BlockLink[bl.BlockLink.Count - 1], data), patch);
 
             Context.Response.Write(JsonConvert.SerializeObject(bl.BlockLink));
             Context.Response.End();
