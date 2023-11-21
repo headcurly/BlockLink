@@ -34,14 +34,14 @@
             background-color: #f8feff;
         }
 
-            #tool div {
-                width: 80%;
-                margin: 10px;
-                border: 1px solid gray;
-                cursor: pointer;
-                margin-left: auto;
-                margin-right: auto;
-            }
+        #tool div {
+            width: 80%;
+            margin: 10px;
+            border: 1px solid gray;
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         .block {
             width: 300px;
@@ -52,11 +52,11 @@
             min-height: 150px;
         }
 
-            .block i {
-                padding: 3px;
-                display: block;
-                font-size: 10px;
-            }
+        .block i {
+            padding: 3px;
+            display: block;
+            font-size: 10px;
+        }
 
         .blockhead {
             width: 100%;
